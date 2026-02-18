@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulation & Analytics - Oxy-Shield</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <style>
+        .sim-container { background: #F8F9FA; min-height: 90vh; padding: 3rem 0; }
+        .control-panel { background: #FFFFFF; border: 2px solid #D4AF37; border-radius: 16px; padding: 2.5rem; margin-bottom: 2rem; box-shadow: 0 8px 24px rgba(212, 175, 55, 0.2); }
+        .slider-group { margin-bottom: 2rem; }
+        .slider-label { display: block; font-weight: 600; color: #111827; margin-bottom: 0.75rem; }
+        .slider { width: 100%; height: 8px; border-radius: 10px; background: #E5E7EB; outline: none; }
+        .slider::-webkit-slider-thumb { width: 24px; height: 24px; border-radius: 50%; background: #D4AF37; cursor: pointer; box-shadow: 0 0 10px rgba(212, 175, 55, 0.5); }
+        .slider-value { display: block; margin-top: 0.5rem; font-size: 1.5rem; color: #D4AF37; font-weight: 700; }
+        .scenario-buttons { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2rem; }
+        .scenario-btn { padding: 1.5rem; border: 2px solid #D4AF37; background: #FFFFFF; border-radius: 12px; cursor: pointer; transition: all 0.3s; font-weight: 600; }
+        .scenario-btn:hover { background: #D4AF37; color: white; transform: translateY(-3px); }
+        .risk-gauge { background: #FFFFFF; border: 1px solid #E5E7EB; border-radius: 16px; padding: 2rem; text-align: center; }
+        .gauge-value { font-size: 4rem; font-weight: 700; color: #D4AF37; font-family: 'Cinzel', serif; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo"><span class="logo-icon">◈</span><span class="logo-text">Oxy-Shield</span></div>
+            <div class="nav-links">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="dashboard.html" class="nav-link">Live Monitoring</a>
+                <a href="profile.html" class="nav-link">Soldier Profile</a>
+                <a href="alerts.html" class="nav-link">Alert Center</a>
+                <a href="simulation.html" class="nav-link active">Simulation</a>
+                <a href="admin.html" class="nav-link">Admin Panel</a>
+            </div>
+        </div>
+    </nav>
+    <div class="sim-container">
+        <div class="container">
+            <h1 class="section-title">Simulation & Predictive Analytics</h1>
+            <div class="control-panel">
+                <h2 style="margin-bottom: 2rem; color: #111827;">Environmental Simulation Controls</h2>
+                <div class="slider-group">
+                    <label class="slider-label">Altitude (meters)</label>
+                    <input type="range" class="slider" min="0" max="8000" value="5400" id="altSlider">
+                    <span class="slider-value" id="altValue">5,400m</span>
+                </div>
+                <div class="slider-group">
+                    <label class="slider-label">Oxygen Level (%)</label>
+                    <input type="range" class="slider" min="70" max="100" value="96" id="o2Slider">
+                    <span class="slider-value" id="o2Value">96%</span>
+                </div>
+                <div class="slider-group">
+                    <label class="slider-label">Temperature (°C)</label>
+                    <input type="range" class="slider" min="-30" max="10" value="-15" id="tempSlider">
+                    <span class="slider-value" id="tempValue">-15°C</span>
+                </div>
+                <div class="scenario-buttons">
+                    <button class="scenario-btn">🏔 Altitude Emergency</button>
+                    <button class="scenario-btn">❄ Extreme Cold</button>
+                    <button class="scenario-btn">⚠ Hypoxia Event</button>
+                </div>
+            </div>
+            <div class="risk-gauge">
+                <h3 style="margin-bottom: 1rem; color: #6B7280;">OVERALL RISK SCORE</h3>
+                <div class="gauge-value">24</div>
+                <p style="color: #D4AF37; font-weight: 600; margin-top: 1rem;">LOW RISK</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('altSlider').addEventListener('input', (e) => {
+            document.getElementById('altValue').textContent = parseInt(e.target.value).toLocaleString() + 'm';
+        });
+        document.getElementById('o2Slider').addEventListener('input', (e) => {
+            document.getElementById('o2Value').textContent = e.target.value + '%';
+        });
+        document.getElementById('tempSlider').addEventListener('input', (e) => {
+            document.getElementById('tempValue').textContent = e.target.value + '°C';
+        });
+    </script>
+</body>
+</html>

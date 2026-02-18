@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert Center - Oxy-Shield</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <style>
+        .alert-header { background: linear-gradient(135deg, #FFFFFF, #F8F9FA); padding: 2rem 0; border-bottom: 2px solid #D4AF37; }
+        .alert-grid { display: grid; gap: 1.5rem; padding: 2rem 0; }
+        .alert-card { background: #FFFFFF; border: 1px solid #E5E7EB; border-radius: 12px; padding: 1.5rem; border-left: 4px solid; }
+        .alert-card.critical { border-left-color: #B45309; background: rgba(180, 83, 9, 0.05); }
+        .alert-card.warning { border-left-color: #F59E0B; background: rgba(245, 158, 11, 0.05); }
+        .alert-title { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem; color: #111827; }
+        .alert-time { font-size: 0.85rem; color: #6B7280; margin-bottom: 1rem; }
+        .alert-message { color: #374151; margin-bottom: 1rem; }
+        .alert-actions { display: flex; gap: 1rem; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo"><span class="logo-icon">◈</span><span class="logo-text">Oxy-Shield</span></div>
+            <div class="nav-links">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="dashboard.html" class="nav-link">Live Monitoring</a>
+                <a href="profile.html" class="nav-link">Soldier Profile</a>
+                <a href="alerts.html" class="nav-link active">Alert Center</a>
+                <a href="simulation.html" class="nav-link">Simulation</a>
+                <a href="admin.html" class="nav-link">Admin Panel</a>
+            </div>
+        </div>
+    </nav>
+    <div class="alert-header">
+        <div class="container">
+            <h1 class="page-title">Alert & Response Center</h1>
+            <p class="page-subtitle">Real-time medical intervention alerts and recommendations</p>
+        </div>
+    </div>
+    <main style="background: #F8F9FA; min-height: 80vh;">
+        <div class="container">
+            <div class="alert-grid" style="padding-top: 2rem;">
+                <div class="alert-card critical">
+                    <div class="alert-title">CRITICAL: Oxygen Saturation Low</div>
+                    <div class="alert-time">Today, 14:32:18 | SOL-7842-ALPHA</div>
+                    <div class="alert-message">SpO2 dropped to 86% at altitude 5,800m. Immediate medical attention required.</div>
+                    <div class="alert-actions">
+                        <button class="btn btn-primary">Acknowledge</button>
+                        <button class="btn btn-secondary">Dispatch Medical Team</button>
+                    </div>
+                </div>
+                <div class="alert-card warning">
+                    <div class="alert-title">WARNING: Elevated Heart Rate</div>
+                    <div class="alert-time">Today, 14:28:45 | SOL-7842-ALPHA</div>
+                    <div class="alert-message">Heart rate sustained above 105 BPM for 12 minutes. Monitor for cardiac stress.</div>
+                    <div class="alert-actions">
+                        <button class="btn btn-primary">Acknowledge</button>
+                        <button class="btn btn-secondary">View Details</button>
+                    </div>
+                </div>
+                <div class="alert-card warning">
+                    <div class="alert-title">WARNING: Temperature Drop Detected</div>
+                    <div class="alert-time">Today, 13:15:22 | SOL-7842-ALPHA</div>
+                    <div class="alert-message">External temperature -22°C. Risk of hypothermia increased.</div>
+                    <div class="alert-actions">
+                        <button class="btn btn-primary">Acknowledge</button>
+                        <button class="btn btn-secondary">Update Protocol</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

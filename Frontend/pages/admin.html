@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Oxy-Shield</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <style>
+        .admin-container { background: #F8F9FA; min-height: 90vh; padding: 3rem 0; }
+        .admin-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 2rem; }
+        .admin-sidebar { background: #FFFFFF; border: 1px solid #E5E7EB; border-radius: 16px; padding: 2rem; }
+        .admin-main { background: #FFFFFF; border: 1px solid #E5E7EB; border-radius: 16px; padding: 2.5rem; }
+        .menu-item { padding: 1rem; margin-bottom: 0.5rem; border-radius: 8px; cursor: pointer; transition: all 0.3s; }
+        .menu-item:hover { background: #F8F9FA; }
+        .menu-item.active { background: linear-gradient(135deg, #D4AF37, #F5C542); color: white; }
+        .settings-group { margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid #E5E7EB; }
+        .settings-label { font-weight: 600; color: #111827; margin-bottom: 1rem; display: block; }
+        .toggle-switch { position: relative; display: inline-block; width: 60px; height: 30px; }
+        .toggle-switch input { opacity: 0; width: 0; height: 0; }
+        .toggle-slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #E5E7EB; transition: 0.4s; border-radius: 30px; }
+        .toggle-slider:before { position: absolute; content: ""; height: 22px; width: 22px; left: 4px; bottom: 4px; background-color: white; transition: 0.4s; border-radius: 50%; }
+        input:checked + .toggle-slider { background-color: #D4AF37; }
+        input:checked + .toggle-slider:before { transform: translateX(30px); }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo"><span class="logo-icon">◈</span><span class="logo-text">Oxy-Shield</span></div>
+            <div class="nav-links">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="dashboard.html" class="nav-link">Live Monitoring</a>
+                <a href="profile.html" class="nav-link">Soldier Profile</a>
+                <a href="alerts.html" class="nav-link">Alert Center</a>
+                <a href="simulation.html" class="nav-link">Simulation</a>
+                <a href="admin.html" class="nav-link active">Admin Panel</a>
+            </div>
+        </div>
+    </nav>
+    <div class="admin-container">
+        <div class="container">
+            <h1 class="section-title">Medical Officer Control Panel</h1>
+            <div class="admin-grid">
+                <div class="admin-sidebar">
+                    <h3 style="margin-bottom: 1.5rem; color: #111827;">Settings</h3>
+                    <div class="menu-item active">System Configuration</div>
+                    <div class="menu-item">Alert Thresholds</div>
+                    <div class="menu-item">User Management</div>
+                    <div class="menu-item">Data Export</div>
+                    <div class="menu-item">Reports</div>
+                </div>
+                <div class="admin-main">
+                    <h2 style="margin-bottom: 2rem; color: #111827;">System Configuration</h2>
+                    <div class="settings-group">
+                        <label class="settings-label">Alert Notifications</label>
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <label class="toggle-switch"><input type="checkbox" checked><span class="toggle-slider"></span></label>
+                            <span>Enable real-time alerts</span>
+                        </div>
+                    </div>
+                    <div class="settings-group">
+                        <label class="settings-label">Heart Rate Threshold (BPM)</label>
+                        <input type="number" value="100" style="padding: 0.75rem; border: 1px solid #E5E7EB; border-radius: 8px; width: 200px;">
+                    </div>
+                    <div class="settings-group">
+                        <label class="settings-label">SpO2 Critical Level (%)</label>
+                        <input type="number" value="88" style="padding: 0.75rem; border: 1px solid #E5E7EB; border-radius: 8px; width: 200px;">
+                    </div>
+                    <div class="settings-group">
+                        <label class="settings-label">Data Refresh Rate</label>
+                        <select style="padding: 0.75rem; border: 1px solid #E5E7EB; border-radius: 8px; width: 200px;">
+                            <option>Every 3 seconds</option>
+                            <option>Every 5 seconds</option>
+                            <option>Every 10 seconds</option>
+                        </select>
+                    </div>
+                    <div style="margin-top: 2rem;">
+                        <button class="btn btn-primary">Save Configuration</button>
+                        <button class="btn btn-secondary" style="margin-left: 1rem;">Reset to Default</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

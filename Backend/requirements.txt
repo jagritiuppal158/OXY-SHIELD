@@ -1,0 +1,31 @@
+# Elite Health Command - Backend Requirements
+# Install with: pip install -r requirements.txt
+
+# Web Framework
+Flask==3.0.0
+Flask-CORS==4.0.0
+Flask-SocketIO==5.3.5
+
+# WebSocket Support
+python-socketio==5.10.0
+eventlet==0.33.3
+
+# Scientific Computing (for ML)
+numpy==1.24.3
+scikit-learn==1.3.2
+
+# Optional: Deep Learning Frameworks (uncomment if needed)
+# tensorflow==2.15.0
+# torch==2.1.2
+
+# Database
+# None needed - using built-in sqlite3
+
+# Utilities
+python-dateutil==2.8.2
+
+google-auth
+google-auth-oauthlib
+google-auth-httplib2
+google-api-python-client
+requests

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soldier Profile - Oxy-Shield</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <style>
+        .profile-container { background: linear-gradient(135deg, #FFFFFF, #F8F9FA); min-height: 90vh; padding: 3rem 0; }
+        .profile-card { background: #FFFFFF; border: 2px solid #D4AF37; border-radius: 16px; padding: 3rem; box-shadow: 0 8px 32px rgba(212, 175, 55, 0.15); }
+        .profile-header { display: flex; gap: 3rem; align-items: center; border-bottom: 2px solid #E5E7EB; padding-bottom: 2rem; margin-bottom: 2rem; }
+        .profile-avatar { width: 120px; height: 120px; border-radius: 50%; background: linear-gradient(135deg, #D4AF37, #F5C542); display: flex; align-items: center; justify-content: center; font-size: 3rem; color: white; }
+        .profile-info h2 { margin-bottom: 0.5rem; color: #111827; }
+        .info-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+        .info-item { padding: 1.5rem; background: #F8F9FA; border-radius: 12px; border-left: 4px solid #D4AF37; }
+        .info-label { font-size: 0.85rem; color: #6B7280; text-transform: uppercase; margin-bottom: 0.5rem; }
+        .info-value { font-size: 1.25rem; font-weight: 600; color: #111827; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo"><span class="logo-icon">◈</span><span class="logo-text">Oxy-Shield</span></div>
+            <div class="nav-links">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="dashboard.html" class="nav-link">Live Monitoring</a>
+                <a href="profile.html" class="nav-link active">Soldier Profile</a>
+                <a href="alerts.html" class="nav-link">Alert Center</a>
+                <a href="simulation.html" class="nav-link">Simulation</a>
+                <a href="admin.html" class="nav-link">Admin Panel</a>
+            </div>
+        </div>
+    </nav>
+    <div class="profile-container">
+        <div class="container">
+            <div class="profile-card">
+                <div class="profile-header">
+                    <div class="profile-avatar">AM</div>
+                    <div class="profile-info">
+                        <h2>Captain Arjun Mehta</h2>
+                        <p style="color: #6B7280;">12th Mountain Infantry Regiment</p>
+                        <div class="status-badge stable" style="margin-top: 1rem;">Active Duty</div>
+                    </div>
+                </div>
+                <h3 style="margin-bottom: 1.5rem; color: #111827;">Personnel Information</h3>
+                <div class="info-grid">
+                    <div class="info-item"><div class="info-label">Soldier ID</div><div class="info-value">SOL-7842-ALPHA</div></div>
+                    <div class="info-item"><div class="info-label">Unit</div><div class="info-value">Charlie Battalion</div></div>
+                    <div class="info-item"><div class="info-label">Rank</div><div class="info-value">Captain</div></div>
+                    <div class="info-item"><div class="info-label">Blood Type</div><div class="info-value">O+</div></div>
+                    <div class="info-item"><div class="info-label">Height</div><div class="info-value">178 cm</div></div>
+                    <div class="info-item"><div class="info-label">Weight</div><div class="info-value">75 kg</div></div>
+                    <div class="info-item"><div class="info-label">Deployment Zone</div><div class="info-value">Siachen Glacier</div></div>
+                    <div class="info-item"><div class="info-label">Days Deployed</div><div class="info-value">42 days</div></div>
+                </div>
+                <div style="margin-top: 2rem; text-align: center;">
+                    <button class="btn btn-primary">Export Medical Report</button>
+                    <button class="btn btn-secondary" style="margin-left: 1rem;">View Full History</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

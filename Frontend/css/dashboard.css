@@ -1,0 +1,536 @@
+/* ═══════════════════════════════════════════════════
+   DASHBOARD STYLES - Premium Design
+   ═══════════════════════════════════════════════════ */
+
+.dashboard-header {
+    background: linear-gradient(135deg, var(--white-pure), var(--white-pearl));
+    border-bottom: 2px solid var(--gold-metallic);
+    padding: 2rem 0;
+    box-shadow: 0 4px 12px var(--shadow-light);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-title {
+    font-size: 2.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-charcoal);
+}
+
+.page-subtitle {
+    color: var(--text-grey);
+    font-size: 1rem;
+}
+
+.system-info {
+    display: flex;
+    gap: 2rem;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.info-label {
+    font-size: 0.75rem;
+    color: var(--text-grey);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.info-value {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--gold-metallic);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.dashboard-main {
+    padding: 2rem 0 4rem;
+    background: var(--white-pearl);
+}
+
+/* Soldier Card */
+.soldier-card {
+    margin-bottom: 2rem;
+    padding: 2rem;
+}
+
+.soldier-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.soldier-name {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    color: var(--text-charcoal);
+}
+
+.soldier-details {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.detail-item {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.detail-label {
+    color: var(--text-grey);
+    font-size: 0.9rem;
+}
+
+.detail-value {
+    color: var(--text-charcoal);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.soldier-status .status-badge {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+}
+
+.status-text {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Vitals Grid */
+.vitals-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.vital-card {
+    padding: 1.5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.vital-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gold-metallic), var(--gold-champagne));
+}
+
+.vital-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.vital-icon {
+    font-size: 1.5rem;
+    color: var(--gold-metallic);
+}
+
+.vital-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-grey);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.vital-value {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.vital-value .value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    font-family: var(--font-display);
+    color: var(--gold-metallic);
+}
+
+.vital-value .unit {
+    font-size: 0.95rem;
+    color: var(--text-grey);
+}
+
+.vital-chart {
+    height: 60px;
+    margin-bottom: 1rem;
+}
+
+.vital-status {
+    padding: 0.4rem 1rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.vital-status.stable {
+    background: rgba(212, 175, 55, 0.1);
+    color: var(--status-stable);
+    border: 1px solid var(--gold-metallic);
+}
+
+.vital-status.warning {
+    background: rgba(245, 158, 11, 0.1);
+    color: var(--status-warning);
+    border: 1px solid var(--status-warning);
+}
+
+.vital-status.critical {
+    background: rgba(180, 83, 9, 0.1);
+    color: var(--status-critical);
+    border: 1px solid var(--status-critical);
+    animation: criticalPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes criticalPulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+}
+
+/* Radial Gauge (SpO2) */
+.radial-gauge {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1rem;
+}
+
+.gauge-svg {
+    transform: rotate(-90deg);
+}
+
+.gauge-bg {
+    fill: none;
+    stroke: var(--silver-grey);
+    stroke-width: 10;
+}
+
+.gauge-fill {
+    fill: none;
+    stroke: var(--gold-metallic);
+    stroke-width: 10;
+    stroke-linecap: round;
+    stroke-dasharray: 314;
+    stroke-dashoffset: 63;
+    transition: stroke-dashoffset 0.5s ease;
+    filter: drop-shadow(0 0 6px var(--glow-gold));
+}
+
+.gauge-text {
+    transform: rotate(90deg);
+    transform-origin: center;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: var(--font-display);
+    fill: var(--gold-metallic);
+    text-anchor: middle;
+}
+
+/* Blood Pressure Bars */
+.bp-bars {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    height: 100px;
+    margin-bottom: 1rem;
+}
+
+.bp-bar {
+    width: 40px;
+    background: var(--silver-light);
+    border-radius: var(--radius-sm);
+    position: relative;
+    overflow: hidden;
+}
+
+.bp-fill {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(to top, var(--gold-metallic), var(--gold-champagne));
+    border-radius: var(--radius-sm);
+    transition: height 0.3s ease;
+}
+
+.bp-label {
+    position: absolute;
+    top: 0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--text-grey);
+}
+
+/* Temperature Dial */
+.temp-dial {
+    margin: 0 auto 1rem;
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+
+.dial-track {
+    width: 100%;
+    height: 100%;
+    background: var(--silver-light);
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.dial-fill {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70%;
+    background: linear-gradient(to top, var(--gold-metallic), var(--gold-champagne));
+    transition: height 0.3s ease;
+}
+
+/* Environmental Section */
+.environmental-section {
+    margin-bottom: 3rem;
+}
+
+.section-heading {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-charcoal);
+    font-family: var(--font-display);
+}
+
+.env-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.env-card {
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.env-icon {
+    font-size: 3rem;
+    opacity: 0.7;
+}
+
+.env-data {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.env-label {
+    font-size: 0.8rem;
+    color: var(--text-grey);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.env-value {
+    font-size: 2.25rem;
+    font-weight: 700;
+    font-family: var(--font-display);
+    color: var(--gold-metallic);
+}
+
+.env-unit {
+    font-size: 0.85rem;
+    color: var(--text-grey);
+}
+
+/* Charts Section */
+.charts-section {
+    margin-bottom: 3rem;
+}
+
+/* Enhanced Input Panel Styles */
+.manual-input-panel {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(251, 252, 253, 0.95));
+}
+
+.manual-input-panel h3 {
+    letter-spacing: 0.5px;
+}
+
+.manual-input-panel h4 {
+    letter-spacing: 0.05em;
+    font-weight: 600;
+}
+
+.input-group {
+    transition: all 0.3s ease;
+}
+
+.input-group:hover {
+    transform: translateY(-2px);
+}
+
+.input-label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-charcoal);
+}
+
+.input-hint {
+    font-size: 0.75rem;
+    color: var(--text-grey);
+}
+
+.manual-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-light);
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+
+.manual-input:focus {
+    outline: none;
+    border-color: var(--gold-metallic);
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+    background: rgba(212, 175, 55, 0.02);
+}
+
+.manual-input.invalid {
+    border-color: #ef4444;
+    background: rgba(239, 68, 68, 0.05);
+}
+
+.manual-input.valid {
+    border-color: #10b981;
+    background: rgba(16, 185, 129, 0.05);
+}
+
+.btn-input {
+    width: 100%;
+    padding: 0.625rem;
+    background: linear-gradient(135deg, var(--gold-metallic), #f3d87a);
+    color: var(--text-charcoal);
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-input:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+}
+
+.btn-input:active {
+    transform: translateY(0);
+}
+
+/* Notification styling */
+.update-notification {
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    background: linear-gradient(135deg, var(--gold-metallic), #f3d87a);
+    color: var(--text-charcoal);
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    font-weight: 600;
+    z-index: 1000;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Charts Section */
+.charts-section {
+    margin-bottom: 3rem;
+}
+
+.charts-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.chart-card {
+    padding: 1.5rem;
+}
+
+.chart-title {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-charcoal);
+    font-family: var(--font-display);
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .vitals-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+    }
+    
+    .vitals-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .env-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .charts-grid {
+        grid-template-columns: 1fr;
+    }
+}

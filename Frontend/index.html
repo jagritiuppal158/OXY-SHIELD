@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oxy-Shield - Military High-Altitude Monitoring</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/landing.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cinzel:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">◈</span>
+                <span class="logo-text">Oxy-Shield</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="pages/dashboard.html" class="nav-link">Live Monitoring</a>
+                <a href="pages/profile.html" class="nav-link">Soldier Profile</a>
+                <a href="pages/alerts.html" class="nav-link">Alert Center</a>
+                <a href="pages/simulation.html" class="nav-link">Simulation</a>
+                <a href="pages/admin.html" class="nav-link">Admin Panel</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <div class="vitals-overlay" id="vitalsOverlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                Oxy-Shield Intelligence<br>
+                <span class="hero-subtitle">for Extreme Terrains</span>
+            </h1>
+            <p class="hero-description">
+                Advanced real-time monitoring system for military personnel<br>
+                deployed in high-altitude operations
+            </p>
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <div class="stat-value">24/7</div>
+                    <div class="stat-label">Continuous Monitoring</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">98.7%</div>
+                    <div class="stat-label">System Accuracy</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">&lt;2s</div>
+                    <div class="stat-label">Response Time</div>
+                </div>
+            </div>
+            <div class="hero-actions">
+                <a href="pages/dashboard.html" class="btn btn-primary">
+                    <span class="btn-icon">▶</span>
+                    View Live Monitoring
+                </a>
+                <a href="pages/simulation.html" class="btn btn-secondary">
+                    <span class="btn-icon">◈</span>
+                    Run Health Simulation
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Command-Grade Capabilities</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">♥</div>
+                    <h3 class="feature-title">Real-Time Vitals</h3>
+                    <p class="feature-description">
+                        Continuous monitoring of heart rate, SpO2, blood pressure, 
+                        and body temperature with millisecond precision.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⛰</div>
+                    <h3 class="feature-title">Environmental Analysis</h3>
+                    <p class="feature-description">
+                        Track altitude, temperature, and humidity conditions 
+                        with predictive impact assessment.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚠</div>
+                    <h3 class="feature-title">Intelligent Alerts</h3>
+                    <p class="feature-description">
+                        AI-powered early warning system with medical 
+                        intervention recommendations.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">◈</div>
+                    <h3 class="feature-title">Predictive Analytics</h3>
+                    <p class="feature-description">
+                        Advanced algorithms forecast health risks before 
+                        critical events occur.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3 class="feature-title">Historical Insights</h3>
+                    <p class="feature-description">
+                        Comprehensive health history with trend analysis 
+                        and pattern recognition.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛡</div>
+                    <h3 class="feature-title">Secure Command</h3>
+                    <p class="feature-description">
+                        Military-grade security protocols with role-based 
+                        access control.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- System Overview -->
+    <section class="overview">
+        <div class="container">
+            <div class="overview-content">
+                <div class="overview-text">
+                    <h2 class="overview-title">Precision Health Monitoring</h2>
+                    <p class="overview-description">
+                        Our elite command system integrates cutting-edge biosensor technology 
+                        with advanced analytics to provide unparalleled health intelligence 
+                        for soldiers operating in extreme high-altitude environments.
+                    </p>
+                    <ul class="overview-list">
+                        <li>Multi-parameter vital signs tracking</li>
+                        <li>Environmental correlation analysis</li>
+                        <li>Sleep cycle and fatigue monitoring</li>
+                        <li>Altitude sickness prediction</li>
+                        <li>Medical intervention protocols</li>
+                    </ul>
+                    <a href="pages/dashboard.html" class="btn btn-outline">
+                        Explore Dashboard
+                    </a>
+                </div>
+                <div class="overview-visual">
+                    <div class="mock-dashboard">
+                        <div class="dash-header">Live Monitoring Active</div>
+                        <div class="dash-metrics">
+                            <div class="mini-metric">
+                                <span class="mini-label">Heart Rate</span>
+                                <span class="mini-value">72 BPM</span>
+                            </div>
+                            <div class="mini-metric">
+                                <span class="mini-label">SpO2</span>
+                                <span class="mini-value">96%</span>
+                            </div>
+                            <div class="mini-metric">
+                                <span class="mini-label">Altitude</span>
+                                <span class="mini-value">4200m</span>
+                            </div>
+                        </div>
+                        <div class="pulse-line-demo" id="pulseLine"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="logo-icon">◈</span>
+                        <span class="logo-text">ELITE HEALTH COMMAND</span>
+                    </div>
+                    <p class="footer-description">
+                        Advanced medical intelligence for extreme defense operations
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Quick Access</h4>
+                    <ul class="footer-links">
+                        <li><a href="pages/dashboard.html">Live Dashboard</a></li>
+                        <li><a href="pages/profile.html">Soldier Profiles</a></li>
+                        <li><a href="pages/alerts.html">Alert Center</a></li>
+                        <li><a href="pages/simulation.html">Analytics</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">System Status</h4>
+                    <div class="system-status">
+                        <div class="status-item">
+                            <span class="status-dot active"></span>
+                            <span>All Systems Operational</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-dot active"></span>
+                            <span>Secure Connection</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Elite Health Command System. Military-Grade Medical Intelligence.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/landing.js"></script>
+</body>
+</html>
