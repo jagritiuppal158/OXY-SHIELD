@@ -12,13 +12,13 @@
 
 
 **Tech Stack**
-_Frontend_
+_Frontend_ --
   HTML, CSS, JavaScript
-_Backend_
+_Backend_ --
   Python
   Flask
   Flask‑SocketIO
-_Machine Learning_
+_Machine Learning_ --
   scikit‑learn
   NumPy
 
