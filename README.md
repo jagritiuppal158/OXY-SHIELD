@@ -2,23 +2,23 @@
 
 
 **Key Features**
-Real‑time sensor data integration
-Machine learning–based health prediction
-Web dashboard for live monitoring
-Alert generation and management
-Modular Flask backend
-Clean frontend with separate pages for admin, profile, and alerts
+1. Real‑time sensor data integration
+2. Machine learning–based health prediction
+3. Web dashboard for live monitoring
+4. Alert generation and management
+5. Modular Flask backend
+6. Clean frontend with separate pages for admin, profile, and alerts
 
 
 
 **Tech Stack**
-Frontend
+_Frontend_
   HTML, CSS, JavaScript
-Backend
+_Backend_
   Python
   Flask
   Flask‑SocketIO
-Machine Learning
+_Machine Learning_
   scikit‑learn
   NumPy
 
